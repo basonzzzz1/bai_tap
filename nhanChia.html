@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" value="number" id="number1">
+<table>
+  <tr>
+    <td><input type="button" value="/2" onclick="chia()"></td>
+    <td><input type="button" value="*2" onclick="nhan()"></td>
+  </tr>
+</table>
+<div id="ketQua"></div>
+<script>
+  function chia(){
+    let number = document.getElementById("number1").value
+    let chia2 = number/2;
+    document.getElementById("ketQua").innerHTML="ket qua la: "+chia2;
+  }
+  function nhan(){
+      let number =document.getElementById("number1").value;
+      let nhan2 = number*2;
+      document.getElementById("ketQua").innerHTML="ket qua la: "+nhan2;
+  }
+</script>
+</body>
+</html>
