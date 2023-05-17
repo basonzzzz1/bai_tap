@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bảng cửu chương</h1>
+<script>
+let bbc = "<table border='1' width='1000' cellspacing='0' cellpadding='15'>";
+for (let i= 2;i <=9;i++){
+  bbc=bbc+"<tr>";
+  for(let j= 1;j<=10 ;j++){
+    bbc=bbc+"<td>"+i+"*"+j+" = "+i*j+"</td>";
+  }
+  bbc=bbc+"</tr>";
+}
+bbc=bbc+"</table>";
+document.write(bbc);
+</script>
+</body>
+</html>
