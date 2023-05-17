@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+function ktSnt(number){// khai báo một hàm với number là số lượng phần tử
+   let kt = 0; //khai báo một số nguyên kt = với 0
+   let ktSNT =0;// khai báo một số nguyên ktSNT = với 0
+   for(let i =2;i<1000000;i++){//tạo một vòng lặp for lặp từ 2 tiến đến  1000
+       if(ktSNT<=number) {// nếu số nguyên ktSNT nhỏ hơn hoặc bằng number thì tiếp tục chạy còn nếu lớn hơn number thì break
+           for (let j = 2; j < i; j++) {//vòng lặp có j =2 và tiến tới i để so sánh i có phải snt không
+               if (i % j == 0 ) {// so sánh i với j và j=2 và nhỏ hơn i nên ko so sánh với 1 và chính nó
+                   kt = kt + 1;//nếu chia hết cho một số nhỏ hơn nó từ 2 đổ lên thì kt+1
+               }
+           }
+           if (kt == 0 ) {//vì các số nhỏ hơn i từ 2 đổ lên không chia hết cho i nên kt = với 0
+               document.write(i + "<br>");// nó sẽ xuất i là số nguyên tố ra
+               ktSNT = ktSNT + 1;// vì có một số nguyên tố r nên ktSNT cộng thêm một và nó thực hiện lại đến khi ktSNT = number
+           }
+           kt=0;//sau mỗi vòng lặp kt sẽ reset lại thành 0 nếu không nó không thực hiện in ra được SNT
+       }else{//khi ktSNT lớn hơn number nó sẽ thoát khỏi vòng lặp
+           break;
+       }
+   }
+}
+let number =parseInt(prompt("nhap vao so luong so nguyen to dau tien"));// cho người dùng nhập number
+ktSnt(number);//gọi hàm ktSnt ra
+</script>
+</body>
+</html>
