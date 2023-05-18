@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Dao Nguoc Mang</h1>
+<input type="button" value="dao nguoc mang" onclick="daoNguoc()"><br>
+<div id="var"></div>
+<script>
+    var arr = [-3,5,1,3,2,10];
+    document.write(arr)
+  // var arr = [-3,5,1,3,2,10];
+  // document.write(arr);
+  // function daoNguoc(){
+  //     document.getElementById("var").innerHTML=arr.reverse()
+  // }
+  function daoNguoc() {
+      var first = 0;
+      var last = arr.length - 1;
+      while (first < last) {
+          var b = arr[first];
+          arr[first] = arr[last];
+          arr[last] = b;
+          first++;
+          last--;
+      }
+      document.getElementById("var").innerHTML=(arr);
+  }
+</script>
+</body>
+</html>
