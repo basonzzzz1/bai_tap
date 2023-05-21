@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var myStr ="You guy try to do the exercises because doing more exercise helps us understand the theory and solve problems better"
+    var str = myStr.split(" ")
+    var str1 = str;
+    var count =0;
+    var maxCount=0;
+    var save ="";
+    for(var i=0;i<str.length;i++){
+        count=0
+        for(var j=0;j<str1.length;j++){
+            if(str[i] == str1[j]){
+                count=count+1;
+            }if(count>maxCount){
+                maxCount=count;
+                save=str[i]
+            }
+        }
+    }
+    document.write("tu xuat hien nhieu nhat la : "+save+" :voi "+maxCount+" lan xuat hien");
+
+</script>
+</body>
+</html>
