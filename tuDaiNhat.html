@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  var myStr ="You guy try to do the exercises because doing more exercise helps us understand the theory and solve problems better"
+  var count = 0
+  var str =myStr.split(" ")
+  var maxStr=""
+  for(var i = 0;i<myStr.length;i++){
+    if(myStr[i] != " "){
+      count=count+1
+    }
+  }
+  for(i =0;i<str.length;i++){
+    if(str[i].length > maxStr.length){
+      maxStr=str[i]
+    }
+  }
+  document.write("so chu trong chuoi la: "+count+"<br>")
+  document.write("tu dai nhat trong chuoi la : "+maxStr)
+</script>
+</body>
+</html>
