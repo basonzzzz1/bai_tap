@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("nhap vao a")
+    function nguyenTo(a) {
+        let kt = 0;
+        for (let i = 2; i < a; i++) {
+            if (a % i == 0) {
+                kt = kt + 1;
+            }
+        }
+        if (kt == 0 && a > 1) {
+            alert(a + " la so nguyen to")
+        } else {
+            alert(a + " khong phai so nguyen to")
+        }
+    }
+    nguyenTo(a)
+</script>
+</body>
+</html>
